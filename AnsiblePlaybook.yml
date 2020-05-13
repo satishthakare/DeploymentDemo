@@ -5,14 +5,14 @@
   tasks:
      - name: Create Project
        command: oc login https://10.20.14.183:8443/ -u system -p admin
-     - name: Print host name
+     - name:host name
        command: hostname
-     - name: Changing webapp project
-       command: oc project webapp
+     - name: Changing MyWeb project
+       command: oc project myweb
      - name: Delete existing project
        command: oc delete all --all
      - name: New app creating
-       command: oc new-app --name=simplejavawebapp https://github.com/harshalpanditxoriant/Java-web-app.git --strategy=docker
+       command: oc new-app --name=xortest https://github.com/satishthakare/DeploymentDemo.git --strategy=docker
      - name: Exposing Service
-       command: oc expose service/simplejavawebapp
+       command: oc expose service/xortest
 ...
