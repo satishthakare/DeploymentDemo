@@ -8,11 +8,11 @@
      - name: check host name
        command: hostname
      - name: Changing MyWeb project
-       command: oc project myweb
+       command: oc project xortest
      - name: Delete existing project
        command: oc delete all --all
      - name: New app creating
-       command: oc new-app --name=xortest https://github.com/satishthakare/DeploymentDemo.git --strategy=docker
+       command: oc new-app --name=myweb https://github.com/satishthakare/DeploymentDemo.git --strategy=docker
      - name: Exposing Service
-       command: oc expose service/xortest
+       command: oc expose service/myweb
 ...
